@@ -1,0 +1,92 @@
+body{
+    background-color: beige;
+}
+span{
+    font-weight: bold;
+}
+#commentSuga{
+    font-size: 0.8em;
+}
+#regras{
+    font-size: 1.3em;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+#sucesso-mail{
+    background-color: limegreen;
+    color: white;
+    font-size:1.2em;
+    padding: 5px;
+    text-align: center;
+}
+
+.falta{
+   background-color: crimson;
+    color: white;
+    font-size:1.2em;
+    padding: 5px;
+    text-align: center; 
+}
+#myForm{
+    border: 1px solid #b7b4b4;
+    padding: 20px;
+    background-color: white;
+
+    
+}
+.bigquestion{
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #b20e2f;
+}
+.escondido{
+    padding-left:50px;
+}
+#intro{
+    text-align: center;
+}
+#autor{
+    text-align: center;
+    font-size: 1.5em;
+}
+#nv{
+   display: block;
+    margin: 0 auto;
+}
+textarea, #email,#nome {
+    margin-bottom: 5px;
+     width: 100%;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
+}
+#sobreTrabalhop{
+    text-align: justify;
+}
+#sobreTrabalho:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#error-message{
+    font-size:1.5em;
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    padding:10px;
+}
+footer{
+    text-align: center;
+    font-size: 0.7em;
+}
+#obrigado{
+    background-color: limegreen;
+    color: white;
+    font-size:1.7em;
+    text-align: center;
+    padding:20px;
+    border: 2px solid green;
+}
+[hidden] { display: none; }

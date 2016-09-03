@@ -1,0 +1,147 @@
+<template name="form">
+	<div class="container top-container col-md-12">
+            <div id="intro" class="col-md-8 col-lg-6 col-sm-12 col-md-offset-2 col-lg-offset-3">
+                <div>
+                    <h1>Indução de Sequência Rápida no Bloco Operatório</h1>
+                </div>
+                <div>
+                    <p>Por favor, responda às seguintes questões:</p>
+                </div>
+                
+            </div>
+            <div id="form-container" class="container col-md-8 col-lg-6 col-sm-12 col-md-offset-2 col-lg-offset-3">
+            <div id="error-message" hidden>
+                <span class="glyphicon glyphicon-warning-sign"></span> Por favor, responda às questões realçadas!
+            </div>
+    
+                <form id="myForm">
+                    <p class="bigquestion">Informação Pessoal</p>
+                    <div id="catProf">
+                    <h4>Categoria Profissional:</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="catProf" value="especialista">Especialista</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="catProf" value="interno">Interno</label>
+                    </div>
+                    </div>
+                    <p id="regras">Considerando um ambiente de <span>bloco operatório</span>, num doente <span>adulto, sem sinais de via aérea difícil </span> e <span>sem contra-indicação</span> a nenhum dos gestos/fármacos abaixo listados: </p>
+                    <p class="bigquestion">Quais os gestos que executa por rotina na realização de uma ISR?</p>
+                    <div id="posicionamento">
+                    <h4>Posicionamento do doente</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="posicionamento" value="ddorsal">Decúbito dorsal a 0º</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="posicionamento" value="elev">Decúbito dorsal com elevação da cabeceira/proclive</label>
+                    </div>
+                    </div>
+                    <div id="preox">
+                    <h4>Pré-oxigenação</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="preox" value="100">Máscara facial com FiO<sub>2</sub> = 1</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="preox" value="mix">Máscara facial com FiO</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="preox" value="0">Não realizo pré-oxigenação por rotina</label>
+                    </div>
+                    </div>
+                    <div id="sellick">
+                    <h4>Aplicação de pressão cricoideia (manobra de Sellick)</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="sellick" value="s" >Sim</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="sellick" value="n">Não</label>
+                    </div>
+                    </div>
+                    <div id="whyNoSellick" class="escondido" hidden>
+                        <h4>Por que motivo(s) não executa a manobra de Sellick? (pode assinalar várias opções)</h4>
+                         <div class="checkbox">
+                        <label><input type="checkbox" name="whyNoSellick" value="utilidade">Por não a considerar útil/eficaz na prevenção da regurgitação</label>
+                    </div>
+                         <div class="checkbox">
+                        <label><input type="checkbox" name="whyNoSellick" value="laringoscopia">Por dificultar a laringoscopia</label>
+                    </div>
+                         <div class="checkbox">
+                        <label><input type="checkbox" name="whyNoSellick" value="execucao">Por dificuldade em garantir que seja executada corretamente</label>
+                    </div>
+                         <div class="checkbox">
+                        <label><input type="checkbox" name="whyNoSellick" id="outra" value="outra">Outra<input id="outro" name="outraNoSellick" type="text" placeholder="Qual?(opcional)" hidden></label>
+                    </div>
+                    </div>
+                    <div id="vent">
+                    <h4>Ventilação com máscara facial após perda de respiração espontânea</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="vent" value="nunca">Nunca</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="vent" value="algumas">Apenas quando existe/se instala hipoxémia durante este período</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="vent" value="s">Sim, desde que não se exceda determinado valor de pressão na via aérea</label>
+                    </div>
+
+                     <div class="radio">
+                        <label><input type="radio" name="vent" value="sempre">Sempre</label>
+                    </div>
+                    </div>
+                    <p class="bigquestion">Relativamente ao relaxante neuromuscular:</p>
+                    <div id="relax">
+                        <h4>Qual o relaxante muscular que utiliza preferencialmente na execução de uma ISR?</h4>
+			<span id="commentSuga">(Considere uma situação onde existe Sugammadex disponível em dose para reversão imediata do bloqueio neuromuscular)</span>
+                    <div class="radio">
+                        <label><input type="radio" name="relax" value="sux">Succinilcolina</label>
+                    </div>
+                     <div class="radio">
+                        <label><input type="radio" name="relax" value="roc">Rocurónio</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="relax" value="vec">Vecurónio</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="relax" value="atr">Atracúrio</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="relax" value="cis">Cisatracúrio</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="relax" value="none">Nenhum</label>
+                    </div>
+                    </div>
+                    
+                    <div id="escondesux" class="escondido" hidden>
+                    <h4>Previamente à administração de succinilcolina, administra dose de relaxante muscular não despolarizante para prevenir ocorrência de fasciculações? </h4>
+                    <div class="radio">
+                        <label><input type="radio" name="fasc" value="s">Sim</label>
+                    </div>
+                     <div class="radio">
+                        <label><input type="radio" name="fasc" value="n">Não</label>
+                    </div>
+                    </div>
+                    <div id="esconderoc" class="escondido" hidden>
+                     <h4>Manteria a sua opção caso não tenha acesso imediato a Sugammadex?</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="suga" value="s">Sim</label>
+                    </div>
+                     <div class="radio">
+                        <label><input type="radio" name="suga" value="n">Não</label>
+                    </div>
+                    </div>
+                    <div id="escondeprime" class="escondido" hidden>
+                        <h4>Administra uma dose de <span id="primetip">priming</span> para acelerar o bloqueio neuromuscular?</h4>
+                    <div class="radio">
+                        <label><input type="radio" name="prime" value="s">Sim</label>
+                    </div>
+                     <div class="radio">
+                        <label><input type="radio" name="prime" value="n">Não</label>
+                    </div>
+                    </div>
+                     <input type="submit" name="submit" class="btn btn-lg btn-default" value="Submeter">
+                </form>
+            </div>
+</div>
+
+</template>
