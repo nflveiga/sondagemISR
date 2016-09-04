@@ -1,0 +1,26 @@
+body{
+  font-size:1.75em;
+}
+#form-container{
+  padding:0px;
+}
+.jumbotron{
+  margin-top:10px;
+}
+.bigquestion{
+  color:darkred;
+  margin-top:20px;
+  background-color:#F8F8FF;
+  padding:5px;
+  font-weight:bolder;
+}
+.questionContainer{
+  margin-top:20px;
+}
+.modal-title{
+  font-weight: bolder;
+  color: 	#1E90FF;
+}
+.question{
+  font-weight: bold;
+}

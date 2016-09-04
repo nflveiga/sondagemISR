@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 //--------------------------------EVENTOS-----------------------------------------------------------
-    
+
 //WHYNOSELLICK SHOW
 $( '#sellick' ).change(function() {
    if($('input:radio[name="sellick"]:checked').val()=='n'){
@@ -23,7 +23,7 @@ $( '#relax' ).change(function() {
     }
     else{
         $('#escondesux').hide();
-        $('.fasc').prop('checked',false);  
+        $('.fasc').prop('checked',false);
     };
 
 
@@ -33,7 +33,7 @@ $( '#relax' ).change(function() {
     }
     else{
         $('#esconderoc').hide();
-        $('.suga').prop('checked',false);  
+        $('.suga').prop('checked',false);
         };
 
 
@@ -48,8 +48,15 @@ $( '#relax' ).change(function() {
         $("#escondeprime").hide();
         $('.prime').prop('checked',false);
 			}
-        
-})        
 
 })
 
+//MODAL do email -> campos em branco quando se esconde
+$('#mail-modal').on('hidden.bs.modal', function (e) {
+  $(this)
+    .find("input,textarea")
+       .val('')
+       .end();
+})      
+
+})

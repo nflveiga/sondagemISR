@@ -5,19 +5,75 @@
         <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
         <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+        <link href="/static/css/form.css" rel="stylesheet"/>
         <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="static/js/form_showhidden.js"></script>
-       <!-- <script src="static/js/form_validate.js"></script> -->
-        
-        
+       <script src="static/js/form_validate2.js"></script>
+
+
         <title>Sondagem</title>
     </head>
     <body>
+
+    {% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <script>toastr.info('{{ message }}')</script>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
         {% block content %}
         {% endblock %}
 
+        <div class="modal fade" id="info-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3 class="modal-title">Informações</h3>
+        </div>
+        <div class="modal-body">
+          <h4><b>Sobre a sondagem</b></h4>
+          <p>Desde a sua descrição original em ..., a indução de sequencia rápida tem sido o gold standard para a abordagem da via aérea em doentes com risco de aspiração. No entanto, esta técnica é executada de maneira muito variável pelos anestesiologistas.<br>
+          Este inquérito tem como objectivo averiguar as preferencias dos anestesiologistas portugueses na execução desta técnica.<br><br></p>
+          <h4><b>Sobre o autor</b></h4>
+          <p>Nuno Veiga, IFE Anestesiologia no IPOLFG, actualmente no 4º ano.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <div class="modal fade" id="mail-modal">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h3 class="modal-title">Enviar mensagem</h3>
+  </div>
+  <div class="modal-body">
+    <form id="mailForm"class="form" method="post" action="{{url_for('send_mail')}}" >
+        <label>E-mail</label><input type="email" name="email" class="form-control"></input>
+        <label>Mensagem</label><textarea name="message" class="form-control" rows="6"></textarea>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" name="submit_mail" class="btn btn-lg btn-success" value="Enviar">
+  </div>
+  </form>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
     </body>
-    
+
 </html
