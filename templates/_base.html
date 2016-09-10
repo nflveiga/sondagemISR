@@ -62,9 +62,10 @@
     <h3 class="modal-title">Enviar mensagem</h3>
   </div>
   <div class="modal-body">
+    <div id="loading" hidden></div>
     <form id="mailForm"class="form" method="post" action="{{url_for('send_mail')}}" >
-        <label>E-mail</label><input type="email" name="email" class="form-control"></input>
-        <label>Mensagem</label><textarea name="message" class="form-control" rows="6"></textarea>
+        <label>E-mail</label><input id="email" type="text" name="email" class="form-control"></input>
+        <label>Mensagem</label><textarea id="message" name="message" class="form-control" rows="6"></textarea>
   </div>
   <div class="modal-footer">
     <input type="submit" name="submit_mail" class="btn btn-lg btn-success" value="Enviar">
@@ -73,7 +74,6 @@
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
     </body>
 
 </html

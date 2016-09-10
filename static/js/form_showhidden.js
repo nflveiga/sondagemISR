@@ -15,6 +15,18 @@ $( '#sellick' ).change(function() {
 }
 });
 
+//ANOS DE XP
+$( '#catProf' ).change(function() {
+  if($('input:radio[name="catProf"]:checked').val()=='especialista'){
+    $('#anosXpDiv').show();
+  }
+  else{
+    $('#anosXpDiv').hide();
+    $("#anosXpDiv option[value='']").prop('selected', true);
+    $("#anosXpDiv option[value='']").prop('disabled', true);
+  }
+})
+
 
 //RELAXANTES - SUCCINILCOLINA - FASCICULAÇÕES SHOW
 $( '#relax' ).change(function() {
@@ -57,6 +69,15 @@ $('#mail-modal').on('hidden.bs.modal', function (e) {
     .find("input,textarea")
        .val('')
        .end();
-})      
+})
+
+
+
+//MOSTRAR LOADING
+window.loading=function loading(){
+  $("#loading").show();
+  $("#mailForm").hide();
+}
+
 
 })

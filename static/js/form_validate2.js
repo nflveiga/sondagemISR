@@ -6,6 +6,10 @@ $( document ).ready(function() {
         value:$("input:radio[name='catProf']:checked").val(),
         areaDestacar:$("#catProf")
     };
+    var anosXp={
+        value:$('#anosXp').val(),
+        areaDestacar:$("#catProf")
+    };
     var posicionamento={
         value:$("input:radio[name='posicionamento']:checked").val(),
         areaDestacar:$("#posicionamento")
@@ -59,9 +63,12 @@ $( document ).ready(function() {
         areaDestacar:$("#laringo")
 
     }
-    var perguntas=[catProf,posicionamento, preox,sellick,vent,relax,laringo]
+    var perguntas=[catProf, posicionamento, preox,sellick,vent,relax,laringo]
 
     //logica para verificar se respostas adicionais foram respondidas
+    if(catProf.value=='especialista'){
+      perguntas.push(anosXp)
+    };
     if(relax.value==='roc'){
       perguntas.push(suga)
       perguntas.push(prime)
@@ -100,6 +107,28 @@ $( document ).ready(function() {
     return false
   }
   })
+
+
+//VALIDAR email
+
+  $( "#mailForm" ).submit(function(e) {
+     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var userMail=$('#email').val();
+    var userMessage=$('#message').val();
+    if(userMail && re.test(userMail) && userMessage){
+      loading();
+    }
+    else if(!re.test(userMail)){
+      e.preventDefault();
+      toastr.error('Por favor, indique um e-mail válido','Formulário incompleto')
+    }
+    else if(!userMessage){
+      e.preventDefault();
+      toastr.error('Por favor, escreva uma mensagem','Formulário incompleto')
+
+    }
+  })
+
 })
 
 

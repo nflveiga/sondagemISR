@@ -27,11 +27,24 @@
                     <div class="radio">
                         <label><input type="radio" name="catProf" value="interno">Interno</label>
                     </div>
+
+
+											<div id="anosXpDiv" class="questionContainer" hidden>
+											<select class="form-control" id="anosXp" name="anosXp" style="width:auto;">
+											<option value="">Quantos anos de especialista?</option>
+											<option value="<10"> < 10 anos</option>
+											<option value="10-20" > 10 - 20 anos</option>
+											<option value=">20"> 20 anos</option>
+											</select>
+
+										</div>
                     </div>
-                    <p id="regras">Considerando um ambiente de <span>bloco operatório</span>, num doente <span>adulto, sem sinais de via aérea difícil </span> e <span>sem contra-indicação</span> a nenhum dos gestos/fármacos abaixo listados: </p>
+										<div id="regras">
+                    <p>Considerando um ambiente de <span>bloco operatório</span>, num doente <span>adulto, sem sinais de via aérea difícil </span> e <span>sem contra-indicação</span> a nenhum dos gestos/fármacos abaixo listados: </p>
                     <p class="bigquestion">Quais os gestos que executa por rotina na realização de uma ISR?</p>
+									</div>
                     <div id="posicionamento" class="questionContainer">
-                    <h4 class="question">Posicionamento do doente</h4>
+                    <h4 class="question">Posicionamento do doente:</h4>
                     <div class="radio">
                         <label><input type="radio" name="posicionamento" value="ddorsal">Decúbito dorsal a 0º</label>
                     </div>
@@ -40,19 +53,19 @@
                     </div>
                     </div>
                     <div id="preox" class="questionContainer">
-                    <h4 class="question">Pré-oxigenação</h4>
+                    <h4 class="question">Pré-oxigenação:</h4>
                     <div class="radio">
-                        <label><input type="radio" name="preox" value="100">Máscara facial com FiO<sub>2</sub> = 1</label>
+                        <label><input type="radio" name="preox" value="100">Máscara facial fluxo de O2 a 100%</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="preox" value="mix">Máscara facial com FiO</label>
+                        <label><input type="radio" name="preox" value="mix">Máscara facial com fluxo de O2 inferior a 100%</label>
                     </div>
                     <div class="radio">
                         <label><input type="radio" name="preox" value="0">Não realizo pré-oxigenação por rotina</label>
                     </div>
                     </div>
                     <div id="sellick" class="questionContainer">
-                    <h4 class="question">Aplicação de pressão cricoideia (manobra de Sellick)</h4>
+                    <h4 class="question">Aplicação de pressão cricoideia (manobra de Sellick):</h4>
                     <div class="radio">
                         <label><input type="radio" name="sellick" value="s" >Sim</label>
                     </div>
@@ -76,7 +89,7 @@
                     </div>
                     </div>
                     <div id="vent" class="questionContainer">
-                    <h4 class="question">Ventilação com máscara facial após perda de respiração espontânea</h4>
+                    <h4 class="question">Ventilação com máscara facial após perda de respiração espontânea:</h4>
                     <div class="radio">
                         <label><input type="radio" name="vent" value="nunca">Nunca</label>
                     </div>
@@ -146,8 +159,14 @@
 												<label><input type="radio" name="laringo" value="video">Videolaringoscopia</label>
 										</div>
 									</div>
-                     <input type="submit" name="submit" class="btn btn-lg btn-default" value="Submeter">
+									<br>
+									<div>
+                     <input id="submitFormBtn" type="submit" name="submit" class="btn btn-primary btn-block" value="Submeter">
+									</div>
                 </form>
+								<div class="footer">
+								 Nuno Veiga - 2016
+							 </div>
             </div>
 </div>
 

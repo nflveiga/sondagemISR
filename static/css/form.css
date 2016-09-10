@@ -24,3 +24,30 @@ body{
 .question{
   font-weight: bold;
 }
+#loading {
+  margin:auto;
+  width: 100px;
+  height: 100px;
+  display: none;
+  background: url(/static/loadingimage.gif) no-repeat;
+  background-size: 75%;
+  cursor: wait;
+}
+#submitFormBtn{
+  height:50px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.footer{
+   border-top: 1px solid grey;
+   padding-top:10px;
+   padding-bottom: 10px;
+  text-align:center;
+  font-size:0.75em;
+}
+#regras{
+  margin-top:20px;
+  padding:5px;
+  background-color: #F8F8FF;
+  font-weight:bolder;
+}

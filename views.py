@@ -32,6 +32,11 @@ def submit_form():
         posicionamento=request.form['posicionamento']
         preox=request.form['preox']
         sellick=request.form['sellick']
+
+        if cat_prof=='especialista':
+            anos_xp=request.form['anosXp']
+        else:
+            anos_xp=0
         if sellick =='n':
             why_no_sellick=request.form.getlist('whyNoSellick')
             why_no_sellick=','.join(why_no_sellick)
@@ -62,8 +67,9 @@ def submit_form():
     #    flash('Preenche todos os campos!!')
      #   return redirect(url_for('show_form'))
     #else:
-    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, relaxante, fascicula, sugammadex, priming,laringo, time_submitted,user_ip) values (?,0,?,?,?,?,?,?,?,?,?,?,?,?)',[
+    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, relaxante, fascicula, sugammadex, priming,laringo, time_submitted,user_ip) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         cat_prof,
+        anos_xp,
         posicionamento,
         preox,
         sellick,
@@ -94,16 +100,18 @@ def send_mail():
     username = 'isrsondagem@gmail.com'
     password = 'midafentapropofolrocuronio'
 
-    try:
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.ehlo()
-        server.login(username, password)
-    except:
-        print 'Something went wrong...'
-
-    header = 'To:' + email_to + '\n' + 'From: ' + username + '\n' + 'Subject: '+user_email+'\n'
-    msg = header + '\n\n' + message
-    server.sendmail(username, email_to, msg)
-    server.close()
-    flash('Mensagem enviada!')
+    if not user_email or not message:
+        flash("Preencha o seu email e mensagem!")
+    else:
+        try:
+            server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+            server.ehlo()
+            server.login(username, password)
+            header = 'To:' + email_to + '\n' + 'From: ' + username + '\n' + 'Subject: '+user_email+'\n'
+            msg = header + '\n\n' + message
+            server.sendmail(username, email_to, msg)
+            server.close()
+            flash('Mensagem enviada!')
+        except:
+            flash('Erro no envio da mensagem...tente outra vez!')
     return redirect(url_for('show_form'))
