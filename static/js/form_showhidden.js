@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-
+//BS TOOLTIP INIT
+   $('[data-toggle="tooltip"]').tooltip(); 
 //--------------------------------EVENTOS-----------------------------------------------------------
 
 //WHYNOSELLICK SHOW

@@ -8,11 +8,14 @@ body{
   margin-top:10px;
 }
 .bigquestion{
-  color:darkred;
+  color:#1E90FF;
   margin-top:20px;
-  background-color:#F8F8FF;
+  background-color:#F5F5F5;
   padding:5px;
   font-weight:bolder;
+}
+.first{
+  margin-top:0px;
 }
 .questionContainer{
   margin-top:20px;
@@ -44,10 +47,4 @@ body{
    padding-bottom: 10px;
   text-align:center;
   font-size:0.75em;
-}
-#regras{
-  margin-top:20px;
-  padding:5px;
-  background-color: #F8F8FF;
-  font-weight:bolder;
 }

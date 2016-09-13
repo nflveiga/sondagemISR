@@ -42,6 +42,14 @@ $( document ).ready(function() {
         value:$("input:radio[name='vent']:checked").val(),
         areaDestacar:$("#vent")
     };
+    var opioid={
+        value:$("input:radio[name='opioid']:checked").val(),
+        areaDestacar:$("#opioid")
+    };
+    var sequence={
+        value:$("input:radio[name='sequence']:checked").val(),
+        areaDestacar:$("#sequence")
+    };
     var relax={
         value:$("input:radio[name='relax']:checked").val(),
         areaDestacar:$("#relax")
@@ -63,7 +71,7 @@ $( document ).ready(function() {
         areaDestacar:$("#laringo")
 
     }
-    var perguntas=[catProf, posicionamento, preox,sellick,vent,relax,laringo]
+    var perguntas=[catProf, posicionamento, preox,sellick,vent,opioid,sequence, relax,laringo]
 
     //logica para verificar se respostas adicionais foram respondidas
     if(catProf.value=='especialista'){

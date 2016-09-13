@@ -43,6 +43,8 @@ def submit_form():
         else:
             why_no_sellick=0
         vent=request.form['vent']
+        opioid=request.form['opioid']
+        sequence=request.form['sequence']
         relax=request.form['relax']
         if relax=='sux':
             fascicula=request.form['fasc']
@@ -67,7 +69,7 @@ def submit_form():
     #    flash('Preenche todos os campos!!')
      #   return redirect(url_for('show_form'))
     #else:
-    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, relaxante, fascicula, sugammadex, priming,laringo, time_submitted,user_ip) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, opioid, sequence, relaxante, fascicula, sugammadex, priming,laringo, time_submitted,user_ip) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         cat_prof,
         anos_xp,
         posicionamento,
@@ -75,6 +77,8 @@ def submit_form():
         sellick,
         why_no_sellick,
         vent,
+        opioid,
+        sequence,
         relax,
         fascicula,
         suga,

@@ -13,7 +13,7 @@
        <script src="static/js/form_validate2.js"></script>
 
 
-        <title>Sondagem</title>
+        <title>Sondagem: Indução de sequência rápida</title>
     </head>
     <body>
 
@@ -39,8 +39,8 @@
         </div>
         <div class="modal-body">
           <h4><b>Sobre a sondagem</b></h4>
-          <p>Desde a sua descrição original em ..., a indução de sequencia rápida tem sido o gold standard para a abordagem da via aérea em doentes com risco de aspiração. No entanto, esta técnica é executada de maneira muito variável pelos anestesiologistas.<br>
-          Este inquérito tem como objectivo averiguar as preferencias dos anestesiologistas portugueses na execução desta técnica.<br><br></p>
+          <p class="text-justify">Desde a sua descrição original na década de 70, a indução de sequencia rápida (ISR) tem sido o gold standard para a abordagem da via aérea em doentes com risco de aspiração pulmonar de conteúdo gástrico. No entanto, esta técnica é executada de maneira muito variável, havendo alguma controvérsia em torno de alguns dos seus componentes.<br>
+          Este inquérito tem como objectivo averiguar as preferências dos anestesiologistas portugueses na execução da ISR.<br><br></p>
           <h4><b>Sobre o autor</b></h4>
           <p>Nuno Veiga, IFE Anestesiologia no IPOLFG, actualmente no 4º ano.</p>
         </div>
@@ -64,8 +64,9 @@
   <div class="modal-body">
     <div id="loading" hidden></div>
     <form id="mailForm"class="form" method="post" action="{{url_for('send_mail')}}" >
-        <label>E-mail</label><input id="email" type="text" name="email" class="form-control"></input>
-        <label>Mensagem</label><textarea id="message" name="message" class="form-control" rows="6"></textarea>
+      <p>Envie-nos as suas sugestões,questões e comentários!</p>
+        <label>Introduza o seu e-mail:</label><input id="email" type="text" name="email" class="form-control"></input>
+        <label>Mensagem a enviar:</label><textarea id="message" name="message" class="form-control" rows="6"></textarea>
   </div>
   <div class="modal-footer">
     <input type="submit" name="submit_mail" class="btn btn-lg btn-success" value="Enviar">

@@ -3,13 +3,13 @@
 	<div class="container top-container col-md-12">
             <div id="intro" class="jumbotron col-md-10 col-lg-8 col-sm-12 col-md-offset-1 col-lg-offset-2">
                 <div>
-                    <h1>Indução de Sequência Rápida no Bloco Operatório</h1>
+                    <h1>Indução de Sequência Rápida <br><small>Prática dos anestesiologistas portugueses</small></h1>
                 </div>
                 <div>
-                    <p>Por favor, responda às seguintes questões:</p>
+									<p>Por favor, responda às seguintes questões considerando um doente adulto, sem história/sinais de via aérea difícil e sem contra-indicação a nenhum dos gestos/fármacos abaixo listados, responda às seguintes questões:</p>
                 </div>
-								<button class="btn-info btn-lg" data-toggle="modal" data-target="#info-modal">Sobre esta sondagem</button>
-								<button class="btn-info btn-lg"  data-toggle="modal" data-target="#mail-modal">Contacto</button>
+								<button class="btn-primary btn-lg" data-toggle="modal" data-target="#info-modal">Sobre esta sondagem</button>
+								<button class="btn-primary btn-lg"  data-toggle="modal" data-target="#mail-modal">Contacto</button>
 
             </div>
             <div id="form-container" class="container col-md-10 col-lg-8 col-sm-12 col-md-offset-1 col-lg-offset-2">
@@ -39,10 +39,7 @@
 
 										</div>
                     </div>
-										<div id="regras">
-                    <p>Considerando um ambiente de <span>bloco operatório</span>, num doente <span>adulto, sem sinais de via aérea difícil </span> e <span>sem contra-indicação</span> a nenhum dos gestos/fármacos abaixo listados: </p>
-                    <p class="bigquestion">Quais os gestos que executa por rotina na realização de uma ISR?</p>
-									</div>
+									<p class="bigquestion first">Quais os gestos que executa por rotina na realização de uma ISR?</p>
                     <div id="posicionamento" class="questionContainer">
                     <h4 class="question">Posicionamento do doente:</h4>
                     <div class="radio">
@@ -89,7 +86,7 @@
                     </div>
                     </div>
                     <div id="vent" class="questionContainer">
-                    <h4 class="question">Ventilação com máscara facial após perda de respiração espontânea:</h4>
+                    <h4 class="question">Ventilação com máscara facial após perda de ventilação espontânea:</h4>
                     <div class="radio">
                         <label><input type="radio" name="vent" value="nunca">Nunca</label>
                     </div>
@@ -104,7 +101,28 @@
                         <label><input type="radio" name="vent" value="sempre">Sempre</label>
                     </div>
                     </div>
-                    <p class="bigquestion">Relativamente ao relaxante neuromuscular:</p>
+										<p class="bigquestion">Relativamente aos fármacos que habitualmente utiliza numa ISR:</p>
+                    <div id="opioid" class="questionContainer">
+											<h4 class="question">Administra opióide?</h4>
+											<div class="radio">
+													<label><input type="radio" class="opioid" name="opioid" value="s">Sim</label>
+											</div>
+											 <div class="radio">
+													<label><input type="radio" class="opioid" name="opioid" value="n">Não</label>
+											</div>
+										</div>
+										<div id="sequence" class="questionContainer">
+											<h4 class="question">Qual das seguintes afirmações descreve melhor a sua administração de fármacos numa ISR?</h4>
+											<div class="radio">
+													<label><input type="radio" class="sequence" name="sequence" value="classica">Administração de dose pré-definida de anestésico endovenoso imediatamente seguida de administração de relaxante muscular</label>
+											</div>
+											 <div class="radio">
+													<label><input type="radio" class="sequence" name="sequence" value="titulada">Administração titulada de de anestésico endovenoso até ocorrer perda de reflexos, seguida de administração de relaxante muscular</label>
+											</div>
+											<div class="radio">
+												 <label><input type="radio" class="sequence" name="sequence" value="curariza">Administração de relaxante muscular em primeiro lugar, seguida do anestésico endovenoso</label>
+										 </div>
+										</div>
                     <div id="relax" class="questionContainer">
                         <h4 class="question">Qual o relaxante muscular que utiliza preferencialmente na execução de uma ISR?</h4>
 			<span id="commentSuga">(Considere uma situação onde existe Sugammadex disponível em dose para reversão imediata do bloqueio neuromuscular)</span>
@@ -116,9 +134,6 @@
                     </div>
                     <div class="radio">
                         <label><input type="radio" class="relax" name="relax" value="other">Outro</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="relax" name="relax" value="none">Nenhum</label>
                     </div>
                     </div>
 
@@ -141,7 +156,8 @@
                     </div>
                     </div>
                     <div id="escondeprime" class="escondido questionContainer" hidden>
-                        <h4 class="question">Administra uma dose de <span id="primetip">priming</span> para acelerar o bloqueio neuromuscular?</h4>
+                        <h4 class="question">Administra uma dose de
+<a id="priming" data-toggle="tooltip" title="Priming: Administração de pequena dose de relaxante muscular não despolarizante alguns minutos antes da administração da dose de indução">priming</a> para acelerar o bloqueio neuromuscular?</h4>
                     <div class="radio">
                         <label><input type="radio" class="prime" name="prime" value="s">Sim</label>
                     </div>
@@ -151,7 +167,7 @@
                     </div>
 										<p class="bigquestion">Relativamente à técnica de intubação:</p>
 										<div id="laringo" class="questionContainer">
-										<h4 class="question">Laringoscopia</h4>
+										<h4 class="question">Qual o tipo de laringoscopia que utiliza como primeira opção numa ISR?</h4>
 										<div class="radio">
 												<label><input type="radio" name="laringo" value="directa">Laringoscopia directa</label>
 										</div>
