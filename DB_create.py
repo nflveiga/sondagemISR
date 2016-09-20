@@ -8,7 +8,7 @@ with sqlite3.connect(DATABASE_PATH) as connection:
     c=connection.cursor()
 
     #criar tabela
-    c.execute("""CREATE TABLE respostas(resposta_id INTEGER PRIMARY KEY AUTOINCREMENT, cat_prof TEXT NOT NULL, anos_xp INTEGER NOT NULL, posicionamento TEXT NOT NULL, preox TEXT NOT NULL, sellick TEXT NOT NULL, no_sellick TEXT, ventila TEXT NOT NULL, opioid TEXT NOT NULL, sequence TEXT NOT NULL, relaxante TEXT NOT NULL, fascicula TEXT, sugammadex TEXT, priming TEXT, laringo TEXT, time_submitted TEXT,user_ip TEXT)""")
+    c.execute("""CREATE TABLE respostas(resposta_id INTEGER PRIMARY KEY AUTOINCREMENT, cat_prof TEXT NOT NULL, anos_xp INTEGER NOT NULL, posicionamento TEXT NOT NULL, preox TEXT NOT NULL, sellick TEXT NOT NULL, no_sellick TEXT, ventila TEXT NOT NULL, opioid TEXT NOT NULL, sequence TEXT NOT NULL, relaxante TEXT NOT NULL, fascicula TEXT, sugammadex TEXT, dose TEXT, priming TEXT, laringo TEXT, time_submitted TEXT,user_ip TEXT)""")
 
 #Passos para acrescentar um parametro a DB:
 # 1- Adicionar no form.html e definir name

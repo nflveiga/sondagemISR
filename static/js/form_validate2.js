@@ -62,6 +62,10 @@ $( document ).ready(function() {
         value:$("input:radio[name='suga']:checked").val(),
         areaDestacar:$("#esconderoc")
     };
+    var dose={
+        value:$("input:radio[name='dose']:checked").val(),
+        areaDestacar:$("#escondedose")
+    };
     var prime={
         value:$("input:radio[name='prime']:checked").val(),
         areaDestacar:$("#escondeprime")
@@ -79,6 +83,7 @@ $( document ).ready(function() {
     };
     if(relax.value==='roc'){
       perguntas.push(suga)
+      perguntas.push(dose)
       perguntas.push(prime)
     };
     if(relax.value==='sux'){

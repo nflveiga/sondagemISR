@@ -48,3 +48,6 @@ body{
   text-align:center;
   font-size:0.75em;
 }
+#priming{
+  border-bottom: 1px dotted
+}

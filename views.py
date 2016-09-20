@@ -52,6 +52,7 @@ def submit_form():
             fascicula=0
         if relax=='roc':
             suga=request.form['suga']
+            dose=request.form['dose']
         else:
             suga=0
         if relax=='other' or relax=='roc':
@@ -69,7 +70,7 @@ def submit_form():
     #    flash('Preenche todos os campos!!')
      #   return redirect(url_for('show_form'))
     #else:
-    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, opioid, sequence, relaxante, fascicula, sugammadex, priming,laringo, time_submitted,user_ip) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+    g.db.execute('insert into respostas (cat_prof, anos_xp, posicionamento, preox, sellick, no_sellick, ventila, opioid, sequence, relaxante, fascicula, sugammadex, dose, priming,laringo, time_submitted,user_ip) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         cat_prof,
         anos_xp,
         posicionamento,
@@ -82,6 +83,7 @@ def submit_form():
         relax,
         fascicula,
         suga,
+        dose,
         prime,
         laringo,
         time_submitted,

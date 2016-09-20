@@ -6,7 +6,7 @@
                     <h1>Indução de Sequência Rápida <br><small>Prática dos anestesiologistas portugueses</small></h1>
                 </div>
                 <div>
-									<p>Por favor, responda às seguintes questões considerando um doente adulto, sem história/sinais de via aérea difícil e sem contra-indicação a nenhum dos gestos/fármacos abaixo listados:</p>
+									<p>Por favor, responda às seguintes questões considerando um doente adulto, sem história ou sinais de via aérea difícil e sem contra-indicação a nenhum dos gestos/fármacos abaixo listados:</p>
                 </div>
 								<button class="btn-primary btn-lg" data-toggle="modal" data-target="#info-modal">Sobre esta sondagem</button>
 								<button class="btn-primary btn-lg"  data-toggle="modal" data-target="#mail-modal">Contacto</button>
@@ -117,7 +117,7 @@
 													<label><input type="radio" class="sequence" name="sequence" value="classica">Administração de dose pré-definida de anestésico endovenoso imediatamente seguida de administração de relaxante muscular</label>
 											</div>
 											 <div class="radio">
-													<label><input type="radio" class="sequence" name="sequence" value="titulada">Administração titulada de de anestésico endovenoso até ocorrer perda de reflexos, seguida de administração de relaxante muscular</label>
+													<label><input type="radio" class="sequence" name="sequence" value="titulada">Administração titulada de anestésico endovenoso até ocorrer perda de reflexos, seguida de administração de relaxante muscular</label>
 											</div>
 											<div class="radio">
 												 <label><input type="radio" class="sequence" name="sequence" value="curariza">Administração de relaxante muscular em primeiro lugar, seguida do anestésico endovenoso</label>
@@ -155,9 +155,24 @@
                         <label><input type="radio"  class="suga" name="suga" value="n">Não</label>
                     </div>
                     </div>
+										<div id="escondedose" class="escondido questionContainer" hidden>
+										 <h4 class="question">Que dose de rocurónio administra numa ISR?</h4>
+										<div class="radio">
+												<label><input type="radio" class="dose" name="dose" value="0.6">0.6 mg/Kg</label>
+										</div>
+										 <div class="radio">
+												<label><input type="radio"  class="dose" name="dose" value="1.0">1.0 mg/Kg</label>
+										</div>
+										<div class="radio">
+											 <label><input type="radio"  class="dose" name="dose" value="1.2">1.2 mg/Kg</label>
+									 </div>
+									 <div class="radio">
+											<label><input type="radio"  class="dose" name="dose" value="outra">Outra</label>
+									</div>
+										</div>
                     <div id="escondeprime" class="escondido questionContainer" hidden>
                         <h4 class="question">Administra uma dose de
-<a id="priming" data-toggle="tooltip" title="Priming: Administração de pequena dose de relaxante muscular não despolarizante alguns minutos antes da administração da dose de indução">priming</a> para acelerar o bloqueio neuromuscular?</h4>
+<span id="priming" data-toggle="tooltip" title="Priming: Administração de pequena dose de relaxante muscular não despolarizante alguns minutos antes da administração da dose de indução"><i>priming</i></span> para acelerar o bloqueio neuromuscular?</h4>
                     <div class="radio">
                         <label><input type="radio" class="prime" name="prime" value="s">Sim</label>
                     </div>

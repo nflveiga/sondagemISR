@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //BS TOOLTIP INIT
-   $('[data-toggle="tooltip"]').tooltip(); 
+   $('[data-toggle="tooltip"]').tooltip();
 //--------------------------------EVENTOS-----------------------------------------------------------
 
 //WHYNOSELLICK SHOW
@@ -43,10 +43,13 @@ $( '#relax' ).change(function() {
 //RELAXANTES - ROCURONIO - SUGAMMADEX SHOW
     if($('input:radio[name="relax"]:checked').val()=='roc'){
         $('#esconderoc').show();
+        $('#escondedose').show();
     }
     else{
         $('#esconderoc').hide();
         $('.suga').prop('checked',false);
+        $('#escondedose').hide();
+        $('.dose').prop('checked',false);
         };
 
 
