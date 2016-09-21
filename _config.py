@@ -4,8 +4,8 @@ import os
 basedir=os.path.abspath(os.path.dirname(__file__))
 
 DATABASE='sondagemISR.db'
-USERNAME='admin'
-PASSWORD='admin'
+USERNAME='nflveiga'
+PASSWORD='midafentapropofolrocuronio'
 WTF_CSRF_ENABLED= True
 SECRET_KEY ='\xc6S\xd4q\xa8G\x01\x0e\x92\xb7\xd4\xd8\xbd%T\x08H\xc9#Yq\x13\xbcH'
 
